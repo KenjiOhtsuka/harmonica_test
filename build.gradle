@@ -22,14 +22,13 @@ buildscript {
         //classpath group: 'org.jetbrains.kotlin', name: 'kotlin-script-util', version: kotlin_version
         //classpath 'org.postgresql:postgresql:9.4.1212.jre6'
         //classpath files('/lib/postgresql-42.2.2.jar')
-        classpath files('../harmonica/build/libs/harmonica-1.0.6.jar')
+        classpath files('../harmonica/build/libs/harmonica-1.0.8.jar')
         classpath files('/lib/mysql-connector-java-8.0.11.jar')
-
     }
 }
 
 group 'com.improve_future'
-version '1.0.7'
+version '1.0.9'
 
 
 apply plugin: 'kotlin'
@@ -64,7 +63,7 @@ dependencies {
 
     compile files('/lib/postgresql-42.2.2.jar')
     compile files('/lib/mysql-connector-java-8.0.11.jar')
-    compile files('../harmonica/build/libs/harmonica-1.0.6.jar')
+    compile files('../harmonica/build/libs/harmonica-1.0.8.jar')
     //compile gradleApi()
     // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
     compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
