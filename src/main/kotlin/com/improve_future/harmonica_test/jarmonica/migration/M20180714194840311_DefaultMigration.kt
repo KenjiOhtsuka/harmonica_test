@@ -7,7 +7,7 @@ import com.improve_future.harmonica.core.AbstractMigration
  */
 class M20180714194840311_DefaultMigration : AbstractMigration() {
     override fun up() {
-        createTable("default_column") {
+        createTable("default_table") {
             integer("integer_column", default = 1)
             varchar("varchar_column", default = "text")
             decimal("decimal_column", default = 1.1)
@@ -16,6 +16,6 @@ class M20180714194840311_DefaultMigration : AbstractMigration() {
     }
 
     override fun down() {
-        dropTable("default_column")
+        dropTable("default_table")
     }
 }
