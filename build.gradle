@@ -73,12 +73,10 @@ dependencies {
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
-        freeCompilerArgs = ["-Xjsr305=warn"]
     }
 }
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
-        freeCompilerArgs = ["-Xjsr305=warn"]
     }
 }
