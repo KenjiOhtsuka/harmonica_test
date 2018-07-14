@@ -5,9 +5,11 @@ import com.improve_future.harmonica.core.AbstractMigration
  */
 class M20180714194840311_ThirdMigration : AbstractMigration() {
     override fun up() {
-        createTable("table_name") {
-            integer("column_1")
-            varchar("column_2")
+        createTable("default_column") {
+            integer("integer_column", default = 1)
+            varchar("varchar_column", default = "text")
+            text("text_column", default = "text")
+            decimal("decimal_column", default = 1.1)
         }
     }
 

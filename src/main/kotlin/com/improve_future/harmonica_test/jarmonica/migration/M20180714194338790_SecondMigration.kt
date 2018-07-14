@@ -5,13 +5,15 @@ import com.improve_future.harmonica.core.AbstractMigration
  */
 class M20180714194338790_SecondMigration : AbstractMigration() {
     override fun up() {
-        createTable("table_name") {
-            integer("column_1")
-            varchar("column_2")
+        createTable("not_null_name") {
+            integer("integer_column", nullable = false)
+            varchar("varchar_column", nullable = false)
+            text("text_column", nullable = false)
+            decimal("decimal_column", nullable = false)
         }
     }
 
     override fun down() {
-        dropTable("table_name")
+        dropTable("not_null_name")
     }
 }
