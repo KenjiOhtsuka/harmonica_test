@@ -2,7 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.2.51'
-    ext.harmonica_version = '1.0.12'
+    ext.harmonica_version = '1.0.13'
 
     repositories {
         jcenter()
