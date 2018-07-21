@@ -1,4 +1,4 @@
-package com.improve_future.harmonica_test.jarmonica
+package com.improve_future.harmonica_test.jarmonica.migration
 
 import com.improve_future.harmonica.core.AbstractMigration
 
