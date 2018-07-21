@@ -19,7 +19,7 @@ class M20180714203511949_OtherMigration : AbstractMigration() {
             timestamp("timestamp_column", withTimeZone = true)
             text("text_column")
         }
-        val tableName = "size_table_for_add"
+        val tableName = "other_table_for_add"
         createTable(tableName) {}
         addIntegerColumn(tableName,"integer_column")
         addVarcharColumn(tableName, "varchar_column", size = 1)
