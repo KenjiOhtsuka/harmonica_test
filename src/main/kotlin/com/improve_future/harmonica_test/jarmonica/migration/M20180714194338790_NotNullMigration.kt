@@ -12,7 +12,11 @@ class M20180714194338790_NotNullMigration : AbstractMigration() {
             varchar("varchar_column", nullable = false)
             decimal("decimal_column", nullable = false)
             boolean("boolean_column", nullable = false)
+            blob("blob_column", nullable = false)
             date("date_column", nullable = false)
+            time("time_column", nullable = false)
+            dateTime("date_time_column", nullable = false)
+            timestamp("timestamp_column", nullable = false)
             text("text_column", nullable = false)
         }
         val tableName = "not_null_table_for_add"
@@ -21,7 +25,11 @@ class M20180714194338790_NotNullMigration : AbstractMigration() {
         addVarcharColumn(tableName, "varchar_column", nullable = false)
         addDecimalColumn(tableName, "decimal_column", nullable = false)
         addBooleanColumn(tableName, "boolean_column", nullable = false)
+        addBlobColumn(tableName, "blob_column", nullable = false)
         addDateColumn(tableName, "date_column", nullable = false)
+        addTimeColumn(tableName, "time_column", nullable = false)
+        addDateTimeColumn(tableName, "date_tiem_column", nullable = false)
+        addTimestampColumn(tableName, "timestamp_column", nullable = false)
         addTextColumn(tableName, "text_column", nullable = false)
     }
 
