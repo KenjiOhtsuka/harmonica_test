@@ -31,9 +31,12 @@ class M20180714192339748_NormalMigration : AbstractMigration() {
         addDateTimeColumn(tableName, "date_tiem_column")
         addTimestampColumn(tableName, "timestamp_column")
         addTextColumn(tableName, "text_column")
+
+        createIndex("normal_table", "integer_column")
     }
 
     override fun down() {
+        dropIndex("normal_table", "normal_table_integer_column_idx")
         dropTable("normal_table_for_add")
         dropTable("normal_table")
     }
