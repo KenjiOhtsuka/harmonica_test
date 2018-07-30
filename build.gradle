@@ -2,7 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.2.51'
-    ext.harmonica_version = '1.1.5'
+    ext.harmonica_version = '1.1.6'
 
     repositories {
         jcenter()
@@ -61,22 +61,24 @@ dependencies {
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-script-util', version: kotlin_version
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlin_version
 
-    compile files('/lib/postgresql-42.2.2.jar')
-    compile files('/lib/mysql-connector-java-8.0.11.jar')
+    compile 'org.xerial:sqlite-jdbc:3.21.0.1'
+    //compile files('/lib/postgresql-42.2.2.jar')
+    //compile files('/lib/mysql-connector-java-8.0.11.jar')
     compile files("../harmonica/build/libs/harmonica-${harmonica_version}.jar")
     //compile gradleApi()
     // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305
     compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
-
 }
 
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs = ["-Xjsr305=strict"]
     }
 }
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs = ["-Xjsr305=strict"]
     }
 }

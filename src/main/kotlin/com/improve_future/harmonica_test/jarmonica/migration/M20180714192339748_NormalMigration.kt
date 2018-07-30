@@ -28,7 +28,7 @@ class M20180714192339748_NormalMigration : AbstractMigration() {
         addBlobColumn(tableName, "blob_column")
         addDateColumn(tableName, "date_column")
         addTimeColumn(tableName, "time_column")
-        addDateTimeColumn(tableName, "date_tiem_column")
+        addDateTimeColumn(tableName, "date_time_column")
         addTimestampColumn(tableName, "timestamp_column")
         addTextColumn(tableName, "text_column")
 
