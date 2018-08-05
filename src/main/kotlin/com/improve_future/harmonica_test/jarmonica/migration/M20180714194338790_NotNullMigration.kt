@@ -18,6 +18,7 @@ class M20180714194338790_NotNullMigration : AbstractMigration() {
             dateTime("date_time_column", nullable = false)
             timestamp("timestamp_column", nullable = false)
             text("text_column", nullable = false)
+            refer("normal_table")
         }
         val tableName = "not_null_table_for_add"
         createTable(tableName) {}
@@ -31,6 +32,9 @@ class M20180714194338790_NotNullMigration : AbstractMigration() {
         addDateTimeColumn(tableName, "date_tiem_column", nullable = false)
         addTimestampColumn(tableName, "timestamp_column", nullable = false)
         addTextColumn(tableName, "text_column", nullable = false)
+        addForeignKey(
+            "not_null_table_for_add", "integer_column",
+            "normal_table_for_add")
     }
 
     override fun down() {
