@@ -41,7 +41,8 @@ Execute the all following scripts and check the databases.
 ```
 
 ```bash
-./gradlew jarmonicaDown -Penv=```
+./gradlew jarmonicaDown
+```
 
 ### For SQLite
 
