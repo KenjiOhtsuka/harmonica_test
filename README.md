@@ -4,7 +4,6 @@ This project is fot the test of [Harmonica](https://github.com/KenjiOhtsuka/harm
 
 ## Database Preparation
 
-
 with user `developer` and the password `developer`.
 
 ### PostgreSQL
@@ -38,7 +37,7 @@ Execute the all following scripts and check the databases.
 ### For MySQL
 
 ```bash
-./gradlew jarmonicaUp -Penv=MySQL
+./gradlew jarmonicaUp -Penv=MySql
 ```
 
 ```bash
@@ -47,7 +46,7 @@ Execute the all following scripts and check the databases.
 ### For SQLite
 
 ```bash
-./gradlew jarmonicaUp -Penv=SQLite
+./gradlew jarmonicaUp -Penv=Sqlite
 ```
 
 ```bash
