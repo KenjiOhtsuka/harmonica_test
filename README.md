@@ -20,3 +20,36 @@ CREATE USER developer@localhost identified by 'developer';
 CREATE DATABASE harmonica_test;
 GRANT ALL PRIVILEGES ON harmonica_test.* TO developer@localhost;
 ```
+
+## How to Test
+
+Execute the all following scripts and check the databases.
+
+### For PostgreSQL
+
+```bash
+./gradlew jarmonicaUp
+```
+
+```bash
+./gradlew jarmonicaDown
+```
+
+### For MySQL
+
+```bash
+./gradlew jarmonicaUp -Penv=MySQL
+```
+
+```bash
+./gradlew jarmonicaDown -Penv=```
+
+### For SQLite
+
+```bash
+./gradlew jarmonicaUp -Penv=SQLite
+```
+
+```bash
+./gradlew jarmonicaDown -Penv=SQLite
+```
