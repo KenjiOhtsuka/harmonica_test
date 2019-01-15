@@ -50,8 +50,13 @@ repositories {
 dependencies {
     //compile 'org.jetbrains.exposed:exposed:0.10.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    
+    /* DB Connector */
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
-    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+    implementation 'org.xerial:sqlite-jdbc:3.21.0.1'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
     //compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler-embeddable', version: kotlin_version
@@ -60,9 +65,6 @@ dependencies {
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-script-util', version: kotlin_version
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlin_version
 
-    compile 'org.xerial:sqlite-jdbc:3.21.0.1'
-    //compile files('/lib/postgresql-42.2.2.jar')
-    //compile files('/lib/mysql-connector-java-8.0.11.jar')
     compile files("../harmonica/build/libs/harmonica-${harmonica_version}.jar")
     //compile gradleApi()
     // https://mvnrepository.com/artifact/com.google.code.findbugs/jsr305

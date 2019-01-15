@@ -8,8 +8,8 @@ import com.improve_future.harmonica.core.AbstractMigration
 class M20180714192339748_NormalMigration : AbstractMigration() {
     override fun up() {
         createTable("normal_table") {
-            integer("integer_column")
-            varchar("varchar_column")
+            integer("integer_column").comment("this is integer column")
+            varchar("varchar_column").comment("this is varchar column")
             decimal("decimal_column")
             boolean("boolean_column")
             blob("blob_column")
@@ -18,6 +18,7 @@ class M20180714192339748_NormalMigration : AbstractMigration() {
             dateTime("date_time_column")
             timestamp("timestamp_column")
             text("text_column")
+            comment("this is normal table.")
         }
         val tableName = "normal_table_for_add"
         createTable(tableName) {}
