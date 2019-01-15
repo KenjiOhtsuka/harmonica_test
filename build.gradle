@@ -50,7 +50,9 @@ repositories {
 dependencies {
     //compile 'org.jetbrains.exposed:exposed:0.10.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compile 'org.postgresql:postgresql:9.4.1212.jre6'
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
     //compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler-embeddable', version: kotlin_version
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
