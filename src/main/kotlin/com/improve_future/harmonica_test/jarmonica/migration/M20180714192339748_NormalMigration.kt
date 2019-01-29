@@ -22,7 +22,7 @@ class M20180714192339748_NormalMigration : AbstractMigration() {
         }
         val tableName = "normal_table_for_add"
         createTable(tableName) {}
-        addIntegerColumn(tableName,"integer_column")
+        addIntegerColumn(tableName, "integer_column")
         addVarcharColumn(tableName, "varchar_column")
         addDecimalColumn(tableName, "decimal_column")
         addBooleanColumn(tableName, "boolean_column")
@@ -34,9 +34,11 @@ class M20180714192339748_NormalMigration : AbstractMigration() {
         addTextColumn(tableName, "text_column")
 
         createIndex("normal_table", "integer_column")
+        createIndex("normal_table", listOf("date_column", "time_column"))
     }
 
     override fun down() {
+        dropIndex("normal_table", "normal_table_date_column_time_column_idx")
         dropIndex("normal_table", "normal_table_integer_column_idx")
         dropTable("normal_table_for_add")
         dropTable("normal_table")

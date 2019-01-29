@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/harmonica_test.iml" filepath="$PROJECT_DIR$/harmonica_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/harmonica_test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/harmonica_test_main.iml" group="harmonica_test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/harmonica_test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/harmonica_test_test.iml" group="harmonica_test" />
     </modules>
   </component>
 </project>
