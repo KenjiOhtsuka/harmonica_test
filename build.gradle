@@ -46,7 +46,6 @@ repositories {
     }
 }
 dependencies {
-    //compile 'org.jetbrains.exposed:exposed:0.10.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     
     /* DB Connector */
@@ -55,12 +54,6 @@ dependencies {
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
     implementation 'org.xerial:sqlite-jdbc:3.21.0.1'
-
-    //compile group: 'org.jetbrains.kotlin', name: 'kotlin-compiler-embeddable', version: kotlin_version
-    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
-    compile group: 'org.jetbrains.kotlin', name: 'kotlin-script-runtime', version: kotlin_version
-    compile group: 'org.jetbrains.kotlin', name: 'kotlin-script-util', version: kotlin_version
-    compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlin_version
 
     compile files("../harmonica/build/libs/harmonica-${harmonica_version}.jar")
     //compile gradleApi()
