@@ -1,6 +1,7 @@
 package com.improve_future.harmonica_test.jarmonica.migration
 
 import com.improve_future.harmonica.core.AbstractMigration
+import com.improve_future.harmonica.core.Dbms
 
 /**
  * NotNullMigration
@@ -32,10 +33,12 @@ class M20180714194338790_NotNullMigration : AbstractMigration() {
         addDateTimeColumn(tableName, "date_time_column", nullable = false)
         addTimestampColumn(tableName, "timestamp_column", nullable = false)
         addTextColumn(tableName, "text_column", nullable = false)
-        addForeignKey(
-            "not_null_table", "integer_column",
-            "not_null_table_for_add", "id"
-        )
+        if (config.dbms != Dbms.MySQL) {
+            addForeignKey(
+                "not_null_table", "integer_column",
+                "not_null_table_for_add", "id"
+            )
+        }
     }
 
     override fun down() {

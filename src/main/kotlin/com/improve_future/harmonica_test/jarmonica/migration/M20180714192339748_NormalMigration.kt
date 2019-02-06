@@ -1,6 +1,8 @@
 package com.improve_future.harmonica_test.jarmonica.migration
 
 import com.improve_future.harmonica.core.AbstractMigration
+import com.improve_future.harmonica.core.Dbms
+import com.improve_future.harmonica.core.RawSql
 
 /**
  * NormalMigration
@@ -28,9 +30,21 @@ class M20180714192339748_NormalMigration : AbstractMigration() {
         addBooleanColumn(tableName, "boolean_column")
         addBlobColumn(tableName, "blob_column")
         addDateColumn(tableName, "date_column")
-        addTimeColumn(tableName, "time_column")
-        addDateTimeColumn(tableName, "date_time_column")
-        addTimestampColumn(tableName, "timestamp_column")
+        if (config.dbms == Dbms.SQLite) {
+            addTimeColumn(tableName, "time_column", default = "12:34:56")
+        } else {
+            addTimeColumn(tableName, "time_column")
+        }
+        if (config.dbms == Dbms.SQLite) {
+            addDateTimeColumn(tableName, "date_time_column", default = "2019-01-01 12:34:56")
+        } else {
+            addDateTimeColumn(tableName, "date_time_column")
+        }
+        if (config.dbms == Dbms.SQLite) {
+            addTimestampColumn(tableName, "timestamp_column", default = "2019-01-01 12:34:56")
+        } else {
+            addTimestampColumn(tableName, "timestamp_column")
+        }
         addTextColumn(tableName, "text_column")
 
         createIndex("normal_table", "integer_column")
